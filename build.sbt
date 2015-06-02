@@ -14,14 +14,12 @@ libraryDependencies ++= Seq(
   "io.kamon" %% "kamon-scala" % kamonVersion,
   "io.kamon" %% "kamon-akka" % kamonVersion,
   "io.kamon" %% "kamon-statsd" % kamonVersion,
+  "io.kamon" %% "kamon-log-reporter" % kamonVersion,
   "io.kamon" %% "kamon-system-metrics" % kamonVersion,
   "org.aspectj" % "aspectjweaver" % "1.8.5"
 )
 
-javaOptions in run ++= Seq(
-  "-Djava.library.path=./sigar",
-  "-Xms128m", "-Xmx1024m")
-
+javaOptions in run ++= Seq("-Xms128m", "-Xmx1024m")
 
 aspectjSettings
 
