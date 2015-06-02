@@ -1,12 +1,12 @@
-package albgorski.akka.kamon
+package giampaolo.akka.kamon
 
 import akka.actor._
-import com.typesafe.config.ConfigFactory
+
 import kamon.Kamon
 
 import scala.concurrent.duration._
 
-object Main extends App {
+object TestApp extends App {
   // start kamon very first
   Kamon.start
 
